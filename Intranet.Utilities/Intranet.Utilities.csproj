@@ -52,6 +52,7 @@
     <Compile Include="Controles.cs" />
     <Compile Include="Convertidores.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="prueba.cs" />
     <Compile Include="Serializadores.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
