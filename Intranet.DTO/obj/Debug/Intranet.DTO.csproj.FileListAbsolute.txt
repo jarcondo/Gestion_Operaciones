@@ -1,0 +1,31 @@
+D:\Proyecto SGE\fuentes\INTRANET\Intranet\Intranet.DTO\bin\Debug\Intranet.DTO.dll
+D:\Proyecto SGE\fuentes\INTRANET\Intranet\Intranet.DTO\bin\Debug\Intranet.DTO.pdb
+D:\Proyecto SGE\fuentes\INTRANET\Intranet\Intranet.DTO\obj\Debug\ResolveAssemblyReference.cache
+D:\Proyecto SGE\fuentes\INTRANET\Intranet\Intranet.DTO\obj\Debug\Intranet.DTO.dll
+D:\Proyecto SGE\fuentes\INTRANET\Intranet\Intranet.DTO\obj\Debug\Intranet.DTO.pdb
+C:\Users\Administrador\Desktop\Intranet\Intranet.DTO\bin\Debug\Intranet.DTO.dll
+C:\Users\Administrador\Desktop\Intranet\Intranet.DTO\bin\Debug\Intranet.DTO.pdb
+C:\Users\Administrador\Desktop\Intranet\Intranet.DTO\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrador\Desktop\Intranet\Intranet.DTO\obj\Debug\Intranet.DTO.dll
+C:\Users\Administrador\Desktop\Intranet\Intranet.DTO\obj\Debug\Intranet.DTO.pdb
+C:\Users\Programador\Desktop\Intranet\Intranet.DTO\bin\Debug\Intranet.DTO.dll
+C:\Users\Programador\Desktop\Intranet\Intranet.DTO\bin\Debug\Intranet.DTO.pdb
+C:\Users\Programador\Desktop\Intranet\Intranet.DTO\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Programador\Desktop\Intranet\Intranet.DTO\obj\Debug\Intranet.DTO.dll
+C:\Users\Programador\Desktop\Intranet\Intranet.DTO\obj\Debug\Intranet.DTO.pdb
+F:\Proyecto SGE\fuentes\INTRANET\Intranet\Intranet.DTO\bin\Debug\Intranet.DTO.dll
+F:\Proyecto SGE\fuentes\INTRANET\Intranet\Intranet.DTO\bin\Debug\Intranet.DTO.pdb
+F:\Proyecto SGE\fuentes\INTRANET\Intranet\Intranet.DTO\obj\Debug\Intranet.DTO.dll
+F:\Proyecto SGE\fuentes\INTRANET\Intranet\Intranet.DTO\obj\Debug\Intranet.DTO.pdb
+C:\Users\Administrador\Desktop\INTRANET\INTRANET\Intranet\Intranet.DTO\bin\Debug\Intranet.DTO.dll
+C:\Users\Administrador\Desktop\INTRANET\INTRANET\Intranet\Intranet.DTO\bin\Debug\Intranet.DTO.pdb
+C:\Users\Administrador\Desktop\INTRANET\INTRANET\Intranet\Intranet.DTO\obj\Debug\Intranet.DTO.dll
+C:\Users\Administrador\Desktop\INTRANET\INTRANET\Intranet\Intranet.DTO\obj\Debug\Intranet.DTO.pdb
+D:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DTO\bin\Debug\Intranet.DTO.dll
+D:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DTO\bin\Debug\Intranet.DTO.pdb
+D:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DTO\obj\Debug\Intranet.DTO.dll
+D:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DTO\obj\Debug\Intranet.DTO.pdb
+E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DTO\bin\Debug\Intranet.DTO.dll
+E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DTO\bin\Debug\Intranet.DTO.pdb
+E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DTO\obj\Debug\Intranet.DTO.dll
+E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DTO\obj\Debug\Intranet.DTO.pdb

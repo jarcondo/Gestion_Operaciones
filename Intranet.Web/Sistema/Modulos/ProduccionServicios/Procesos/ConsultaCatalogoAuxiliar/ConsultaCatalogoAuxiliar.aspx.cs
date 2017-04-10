@@ -1,0 +1,166 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Intranet.DTO.SGE;
+using Intranet.BL.ProduccionServicios.Proceso;
+using Intranet.BL.ProduccionServicios.Maestra;
+using Intranet.DTO.ProduccionServicios.Procesos;
+using Intranet.DTO.ProduccionServicios.Maestras;
+using Ext.Net;
+using Intranet.BL.SGE;
+using Intranet.Web.AppCode;
+
+namespace Intranet.Web.Sistema.Modulos.ProduccionServicios.Procesos.ConsultaCatalogoAuxiliar
+{
+    public partial class ConsultaCatalogoAuxiliar : BasePage  //System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!Ext.Net.X.IsAjaxRequest)
+            {
+                List<ObraDTO> olObra = new List<ObraDTO>();
+                ObraBL oObraBL = new ObraBL();
+                if (Usuario.IdRol != 1)
+                { 
+                    olObra = oObraBL.ListarObra(Usuario.IdBase);
+                    olObra = (List<ObraDTO>)(from item in olObra
+                                             where item.CP == true
+                                             select item).ToList();  
+
+                }
+                else { 
+                olObra = oObraBL.ListarObraTodas();
+                olObra = (List<ObraDTO>)(from item in olObra
+                                         where item.CP == true
+                                         select item).ToList();                
+                }
+                int IdObraIni = olObra.ElementAt(0).IdObra;
+                this.StoreObra.DataSource = olObra;
+                this.StoreObra.DataBind();
+
+                //List<AuxiliarCatalogoDTO> olistaAuxiliarCatalogoDTO = new AuxiliarCatalogoBL().ListarAuxiliarCatalogo(IdObraIni);
+                //this.Store1.DataSource = olistaAuxiliarCatalogoDTO;
+                //this.Store1.DataBind();
+                //Session["olCatalogo"] = olistaAuxiliarCatalogoDTO;
+
+                List<AuxiliarDTO> olistaAuxiliarDTO = new AuxiliarBL().ListarAuxiliar(21);
+                this.StoreAuxiliar.DataSource = olistaAuxiliarDTO;
+                this.StoreAuxiliar.DataBind();
+
+                List<ConsultaCatalogoAuxiliarDTO> olistaCatalogoAuxiliarDTO = new ConsultaCatalogoAuxiliarBL().ListarAuxiliarCatalogo(IdObraIni);
+                this.StoreCatalogo.DataSource = olistaCatalogoAuxiliarDTO;
+                this.StoreCatalogo.DataBind();
+                Session["olistaAuxiliarCatalogo"] = olistaCatalogoAuxiliarDTO;
+
+                List<ConsultaCatalogoAuxiliarDTO> olistaProductoAuxiliarDTO = new ConsultaCatalogoAuxiliarBL().ListarAuxiliarProducto();
+                this.StoreAlmacen.DataSource = olistaProductoAuxiliarDTO;
+                this.StoreAlmacen.DataBind();
+                Session["olistaProductoAuxiliar"] = olistaProductoAuxiliarDTO;
+                //this.IdObra.Hide();
+                //this.IdActividad.Hide();
+                //this.CodigoActividad.Hide();
+                //this.FormPanel1.Hide();
+            }
+
+        }
+
+        [DirectMethod]
+        public void Eliminar(int idobra, int idactividad, int idcatalogo)
+        {
+            AuxiliarCatalogoDTO oAuxiliarCatalogoDTO = new AuxiliarCatalogoDTO();
+            oAuxiliarCatalogoDTO.IdActividad = idactividad;
+            //oAuxiliarCatalogoDTO.IdAuxiliar = Convert.ToInt32(this.ComboBox1.Text);
+            //oAuxiliarCatalogoDTO.IdObra = Convert.ToInt32(this.Obra.Text);
+            oAuxiliarCatalogoDTO.IdProCatalogo = idcatalogo;
+            AuxiliarCatalogoBL oAuxiliarCatalogoBL = new AuxiliarCatalogoBL();
+            oAuxiliarCatalogoBL.Eliminar(oAuxiliarCatalogoDTO);
+
+           
+
+            List<AuxiliarCatalogoDTO> olistaAuxiliarCatalogoDTO = new List<AuxiliarCatalogoDTO>();
+            olistaAuxiliarCatalogoDTO = (List<AuxiliarCatalogoDTO>)Session["olCatalogo"];
+
+            var result2 = (from item in olistaAuxiliarCatalogoDTO where item.IdProCatalogo == oAuxiliarCatalogoDTO.IdProCatalogo select item).First();
+            result2.IdAuxiliar = 0;
+            result2.DescripcionAuxiliar = "No Asignado";
+            //this.Store1.DataSource = olistaAuxiliarCatalogoDTO;
+            //this.Store1.DataBind();
+
+            X.Msg.Notify("Actualizar Registro", "Registro Actualizado").Show();
+        }
+        protected void ZonaRefresh(object sender, StoreRefreshDataEventArgs e)
+        {
+        }
+
+        [DirectMethod]
+        public void Actualizar(int IdAuxiliar)
+        {
+
+            List<ConsultaCatalogoAuxiliarDTO> olistaCatalogoAuxiliarDTO = new List<ConsultaCatalogoAuxiliarDTO>();
+            olistaCatalogoAuxiliarDTO = (List<ConsultaCatalogoAuxiliarDTO>)Session["olistaAuxiliarCatalogo"];
+
+            olistaCatalogoAuxiliarDTO = (List<ConsultaCatalogoAuxiliarDTO>)(from item in olistaCatalogoAuxiliarDTO
+                                                                            where item.IdAuxiliar == IdAuxiliar
+                                                                            select item).ToList();
+
+
+            this.StoreCatalogo.DataSource = olistaCatalogoAuxiliarDTO;
+            this.StoreCatalogo.DataBind();
+
+
+
+            List<ConsultaCatalogoAuxiliarDTO> olistaProductoAuxiliarDTO = new ConsultaCatalogoAuxiliarBL().ListarAuxiliarProducto();
+
+            olistaProductoAuxiliarDTO = (List<ConsultaCatalogoAuxiliarDTO>)Session["olistaProductoAuxiliar"];
+
+            olistaProductoAuxiliarDTO = (List<ConsultaCatalogoAuxiliarDTO>)(from item in olistaProductoAuxiliarDTO
+                                                                            where item.IdAuxiliar == IdAuxiliar
+                                                                            select item).ToList();
+
+
+            this.StoreAlmacen.DataSource = olistaProductoAuxiliarDTO;
+            this.StoreAlmacen.DataBind();
+
+
+
+        }
+
+        [DirectMethod]
+        public void ListarCatalogoAuxiliarObra() 
+        {
+            List<ConsultaCatalogoAuxiliarDTO> olistaCatalogoAuxiliarDTO = new ConsultaCatalogoAuxiliarBL().ListarAuxiliarCatalogo(Convert.ToInt32(this.Obra.Text));
+            this.StoreCatalogo.DataSource = olistaCatalogoAuxiliarDTO;
+            this.StoreCatalogo.DataBind();
+
+        }
+        
+
+
+
+
+        protected void MyData_Refresh(object sender, StoreRefreshDataEventArgs e)
+        {
+            //this.Store1.DataSource = (List<AuxiliarCatalogoDTO>)Session["olCatalogo"];
+            //this.Store1.DataBind();
+        }
+
+        [DirectMethod]
+        public void GetCatalogo()
+        {
+
+            //List<AuxiliarCatalogoDTO> olistaAuxiliarCatalogoDTO = new AuxiliarCatalogoBL().ListarAuxiliarCatalogo(Convert.ToInt32(this.Obra.Text));
+            //this.Store1.DataSource = olistaAuxiliarCatalogoDTO;
+            //this.Store1.DataBind();
+            //Session["olCatalogo"] = olistaAuxiliarCatalogoDTO;
+
+            //List<AuxiliarDTO> olistaAuxiliarDTO = new AuxiliarBL().ListarAuxiliar(Convert.ToInt32(this.Obra.Text));
+            //this.StoreCombo.DataSource = olistaAuxiliarDTO;
+            //this.StoreCombo.DataBind();
+
+
+        }
+    }
+}

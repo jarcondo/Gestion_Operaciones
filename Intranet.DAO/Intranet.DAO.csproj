@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6D6DD48A-C7D9-4835-A613-D299A90FCC4C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intranet.DAO</RootNamespace>
+    <AssemblyName>Intranet.DAO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ext.Net">
+      <HintPath>..\Intranet.Web\Libreria\Dlls\Ext.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CFG\CFG_AccesoDAO.cs" />
+    <Compile Include="ProduccionServicios\Maestra\Actividad\ActividadDAO.cs" />
+    <Compile Include="ProduccionServicios\Maestra\Auxiliar\AuxiliarDAO.cs" />
+    <Compile Include="ProduccionServicios\Maestra\Catalogo\CatalogoDAO.cs" />
+    <Compile Include="ProduccionServicios\Maestra\Distrito\DistritoDAO.cs" />
+    <Compile Include="ProduccionServicios\Maestra\ProductoDAO\ProductoDAO.cs" />
+    <Compile Include="ProduccionServicios\Maestra\SubActividad\SubActividadDAO.cs" />
+    <Compile Include="ProduccionServicios\Maestra\Zona\ZonaDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\AuxiliarCatalogo\AuxiliarCatalogoDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\AuxiliarProducto\AuxiliarProductoDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\CambioMasivoEstado\CambioMasivoEstadoDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\CargaConsumo\CargaConsumoDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsultaCatalogoAuxiliar\ConsultaCatalogoAuxiliarDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsultaTeorico\ConsultaTeoricoDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\ConsumoMaterialDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetalleBuzonDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetalleCaracteristicasDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetalleConexionesDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetalleDeficienciasDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetalleInspeccionDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetalleLimpiezaDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetalleOtrosDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetallePurgaDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\CruceMaterial\CruceMaterialDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\CuadrillaDistrito\CuadrillaDistritoDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\EjecucionOT\AdminTrabajoComplementarioDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\EjecucionOT\EjecucionOTDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\EjecucionOT\ResponsableActividadDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\MovimientoAlmacen\MovimientoAlmacenDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ObraDistrito\ObraDistritoDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\OrdenTrabajo\ArchivoCargaOTDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\OrdenTrabajo\OrdenTrabajoDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\Puntaje\PuntajeDAO.cs" />
+    <Compile Include="ProduccionServicios\Proceso\Valorizacion\ValorizacionDAO.cs" />
+    <Compile Include="SGE\Usuario\UsuarioDAO.cs" />
+    <Compile Include="ProduccionServicios\Maestra\EstadoOT\EstadoOTDAO.cs" />
+    <Compile Include="ProduccionServicios\Maestra\TrabajoComplementario\TrabajoComplementarioDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SGE\Cuadrilla\CuadrillaDAO.cs" />
+    <Compile Include="SGE\Empleado\EmpleadoDAO.cs" />
+    <Compile Include="SGE\Generica\GenericaDAO.cs" />
+    <Compile Include="SGE\Obra\ObraDAO.cs" />
+    <Compile Include="SGE\Proveedor\ProveedorDAO.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Intranet.DTO\Intranet.DTO.csproj">
+      <Project>{80500EAA-2233-4B0C-A1D7-4398E11B119F}</Project>
+      <Name>Intranet.BusinessEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

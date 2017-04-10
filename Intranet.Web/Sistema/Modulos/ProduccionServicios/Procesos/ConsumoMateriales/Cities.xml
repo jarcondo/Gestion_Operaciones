@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<countries>
+  <country code="Operativo">
+    <city>
+      <id>1</id>
+      <name>Prev. Mayor</name>
+    </city>
+    <city>
+      <id>2</id>
+      <name>Prev. Menor</name>
+    </city>
+  </country>
+      <country code="Inoperativo">
+        <city>
+          <id>3</id>
+          <name>Correctivo</name>
+        </city>
+        <city>
+          <id>4</id>
+          <name>Cambio</name>
+        </city>
+      </country>
+    </countries>

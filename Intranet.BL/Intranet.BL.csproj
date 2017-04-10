@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE91E462-28F1-4345-97C6-D5DE36D45C41}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intranet.BL</RootNamespace>
+    <AssemblyName>Intranet.BL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CFG\CFG_AccesoBL.cs" />
+    <Compile Include="ProduccionServicios\Maestra\Actividad\ActividadBL.cs" />
+    <Compile Include="ProduccionServicios\Maestra\Auxiliar\AuxiliarBL.cs" />
+    <Compile Include="ProduccionServicios\Maestra\Catalogo\CatalogoBL.cs" />
+    <Compile Include="ProduccionServicios\Maestra\Distrito\DistritoBL.cs" />
+    <Compile Include="ProduccionServicios\Maestra\ProductoBL\ProductoBL.cs" />
+    <Compile Include="ProduccionServicios\Maestra\SubActividadBL\SubActividadBL.cs" />
+    <Compile Include="ProduccionServicios\Maestra\Zona\ZonaBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\AuxiliarCatalogo\AuxiliarCatalogoBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\AuxiliarProducto\AuxiliarProductoBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\CambioMasivoEstado\CambioMasivoEstadoBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\CargaConsumo\CargaConsumoBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsultaCatalogoAuxiliar\ConsultaCatalogoAuxiliarBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsultaTeorico\ConsultaTeoricoBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\ConsumoMaterialBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetalleBuzonBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetalleCaracteristicasBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetalleConexionesBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetalleDeficienciasBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetalleInspeccionBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetalleLimpiezaBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetalleOtrosBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ConsumoMaterial\DetallePurgaBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\CruceMaterial\CruceMaterialBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\CuadrillaDistrito\CuadrillaDistritoBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\EjecucionOT\AdminTrabajoComplementarioBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\MovimientoAlmacen\MovimientoAlmacenBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\ObraDistrito\ObraDistritoBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\Puntaje\PuntajeBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\Valorizacion\ValorizacionBL.cs" />
+    <Compile Include="SGE\Maestra\Usuario\UsuarioBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\EjecucionOT\EjecucionOTBL.cs" />
+    <Compile Include="ProduccionServicios\Maestra\EstadoOT\EstadoOTBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\OrdenTrabajo\OrdenTrabajoBL.cs" />
+    <Compile Include="ProduccionServicios\Proceso\EjecucionOT\ResponsableActividadBL.cs" />
+    <Compile Include="ProduccionServicios\Maestra\TrabajoComplementario\TrabajoComplementarioBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SGE\Maestra\Cuadrilla\CuadrillaBL.cs" />
+    <Compile Include="SGE\Maestra\Empleado\EmpleadoBL.cs" />
+    <Compile Include="SGE\Maestra\Generica\GenericaBL.cs" />
+    <Compile Include="SGE\Maestra\Obra\ObraBL.cs" />
+    <Compile Include="SGE\Maestra\Proveedor\ProveedorBL.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Intranet.DTO\Intranet.DTO.csproj">
+      <Project>{80500EAA-2233-4B0C-A1D7-4398E11B119F}</Project>
+      <Name>Intranet.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intranet.DAO\Intranet.DAO.csproj">
+      <Project>{6D6DD48A-C7D9-4835-A613-D299A90FCC4C}</Project>
+      <Name>Intranet.DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

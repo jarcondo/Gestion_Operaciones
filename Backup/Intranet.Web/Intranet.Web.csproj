@@ -1,0 +1,1729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CEE337C7-F21F-4A9F-8312-4DAAD47C680E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intranet.Web</RootNamespace>
+    <AssemblyName>Intranet.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <DeployIisAppPath>Intranet/</DeployIisAppPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.51116\lib\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Ext.Net, Version=1.2.0.21945, Culture=neutral, PublicKeyToken=2e12ce3d0176cd87, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libreria\Dlls\Ext.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net.Utilities, Version=1.1.0.21941, Culture=neutral, PublicKeyToken=2c34ac34702a3c23, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libreria\Dlls\Ext.Net.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft Enterprise Library 4.1 - October 2008\Bin\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b9a188c8922137c6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libreria\Dlls\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="animated_favicon1.gif" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Libreria\Dlls\AjaxControlToolkit.dll" />
+    <Content Include="Libreria\Esquemas\DashBoardSchema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Libreria\Estilos\global.css" />
+    <Content Include="Libreria\Estilos\main.css" />
+    <Content Include="Libreria\Imagenes\cancel.png" />
+    <Content Include="Libreria\Imagenes\delete.png" />
+    <Content Include="Libreria\Imagenes\editar.png" />
+    <Content Include="Libreria\Imagenes\iconCONCYSSA.png" />
+    <Content Include="Libreria\Imagenes\job.png" />
+    <Content Include="Libreria\Imagenes\job2.png" />
+    <Content Include="Libreria\Imagenes\logo.jpg" />
+    <Content Include="Libreria\Imagenes\logotipo.png" />
+    <Content Include="Libreria\Imagenes\new.png" />
+    <Content Include="Libreria\Imagenes\printer.png" />
+    <Content Include="Libreria\Imagenes\save.png" />
+    <Content Include="Libreria\Imagenes\search.png" />
+    <Content Include="Libreria\Imagenes\search2.png" />
+    <Content Include="Libreria\Imagenes\tools.png" />
+    <Content Include="Libreria\Imagenes\xformtext.gif" />
+    <Content Include="Libreria\Scripts\global.js" />
+    <Content Include="Sistema\CambioPassword.aspx" />
+    <Content Include="Sistema\DashBoard.aspx" />
+    <Content Include="Sistema\Default.aspx" />
+    <Content Include="Libreria\Dlls\Ext.Net.dll" />
+    <Content Include="Libreria\Dlls\Ext.Net.Utilities.dll" />
+    <Content Include="Libreria\Dlls\Newtonsoft.Json.dll" />
+    <Content Include="Libreria\Imagenes\logoIntranet.png" />
+    <Content Include="Sistema\HelpWindow.ascx" />
+    <Content Include="Sistema\Login.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Maestras\Actividad\Actividad.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Maestras\Actividad\SubActividad.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Maestras\EstadoOT\EstadoOT.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Maestras\TrabajoComplementario\TrabajoComplementario.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Maestras\Zona\Zona.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\ArchivosImpresionMasiva\ArchivoParaImpresionMasiva.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\ArchivosImpresionMasiva\Excel.xsl" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\AuxiliarCatalogo\AuxiliarCatalogo.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\CambioEstadoValorizacion\CambioEstadoMasivo.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\CargaConsumo\CargaConsumo.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\Carga\CambioMasivoEstado.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\Carga\CargaSGIO.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\ConsultaAlmacenProduccion\ConsultaAlmacenProduccion.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\ConsultaCatalogoAuxiliar\ConsultaCatalogoAuxiliar.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\ConsultaTeorico\ConsultaTeorico.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\ConsultaTeorico\Excel.xsl" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\ConsumoMateriales\Cities.xml" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\ConsumoMateriales\ConsumoMaterial.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\CruceMaterial\CruceMateriales.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\CruceMaterial\RegistroCruceMaterial.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\CuadrillaZona\CuadrillaZona.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\EjecucionOT\Excel.xsl" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\EjecucionOT\MantEjecucionOT.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\EjecucionOT\MantMasivoEjecucionOT.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\EjecucionOT\RegEjecucionOT.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\Inconsistencias\InconsistenciaDatos.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\Monitoreo\MonitoreoOT.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\ObraDistrito\ObraDistrito.aspx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\ProductoAuxiliar\ProductoAuxiliar.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Procesos\ResponsableActividad\ResponsableActividad.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\Excel.xsl" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\rptBuzonesLimpiezaMaqBalde.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\rptCargoOTChorrillos.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\rptLimpBuzonRetSolidos.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\rptLimpiezaColectoresMaqBaldes.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\rptOrdLimpColectCambioTapaBuz.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\CargoEntrega\Excel.xsl" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\CargoEntrega\VerCargoSGI.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceMaterial\RptVisorCruceMaterial.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceMaterial\RptVisorCruceMaterialDetallado.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_cs.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_da.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_de.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_en.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_es.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_fi.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_fr.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_hu.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_it.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_ja.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_ko.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_nb.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_nl.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_pl.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_pt.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_ru.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_sk.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_sv.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_th.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_tr.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_zh_CN.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\CRViewer_res_zh_TW.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_cs.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_da.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_de.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_en.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_es.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_fi.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_fr.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_hu.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_it.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_ja.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_ko.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_nb.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_nl.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_pl.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_pt.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_ru.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_sk.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_sv.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_th.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_tr.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_zh_CN.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\csprintdlg_res_zh_TW.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\LCIDTable.xml" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_cs.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_da.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_de.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_en.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_es.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_fi.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_fr.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_hu.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_it.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_ja.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_ko.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_nb.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_nl.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_pl.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_pt.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_ru.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_sk.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_sv.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_th.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_tr.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_zh_CN.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\PrintControl_res_zh_TW.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\pvlocale-1-0.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_cs.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_da.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_de.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_en.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_es.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_fi.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_fr.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_hu.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_it.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_ja.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_ko.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_nb.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_nl.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_pl.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_pt.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_ru.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_sk.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_sv.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_th.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_tr.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_zh_CN.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\sviewhlp_res_zh_TW.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_cs.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_da.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_de.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_en.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_es.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_fi.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_fr.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_hu.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_it.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_ja.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_ko.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_nb.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_nl.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_pl.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_pt.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_ru.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_sk.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_sv.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_th.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_tr.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_zh_CN.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\swebrs_res_zh_TW.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\xerces-c_2_7.dll" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\XERCES27_LICENSE.txt" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allInOne.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_cs.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_da.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_de.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_en.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_es.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_fi.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_fr.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_hu.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_it.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_ja.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_ko.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_nb.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_nl.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_pl.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_pt.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_ru.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_sk.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_sv.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_th.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_tr.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_zh_CN.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\allStrings_zh_TW.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\crsmarttag.asp" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\crystalimagehandler.asp" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\css\cedefault.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\css\default.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\css\exception.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\css\prompting.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\html\calendar.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\html\calendarbottom.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\html\calendartop.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\imagehandlerdotnetbridge.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\buttonl.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\buttonm.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\buttonr.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortActive100.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortActive150.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortActive200.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortActive250.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortActive300.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortActive350.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortActive400.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortActive50.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortHover100.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortHover150.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortHover200.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortHover250.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortHover300.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortHover350.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortHover400.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortHover50.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortInactive100.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortInactive150.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortInactive200.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortInactive250.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortInactive300.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortInactive400.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\DownArrowSortInactive50.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortActive100.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortActive150.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortActive200.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortActive250.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortActive300.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortActive350.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortActive400.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortActive50.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortHover100.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortHover150.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortHover200.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortHover250.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortHover300.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortHover350.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortHover400.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortHover50.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortInactive100.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortInactive150.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortInactive200.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortInactive250.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortInactive300.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortInactive400.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\images\isort\UpArrowSortInactive50.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\calendar.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\calendar_param.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewerinclude.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\api.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ArgumentNormalizer.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\bobjcallback.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ButtonList.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\Calendar.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\Colors.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\common.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\crv.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\Dialogs.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\dom.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\encoding.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\event.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\GroupTree.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\GroupTreeListener.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\GroupTreeNode.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\html.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ImageSprites.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\allInOne.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\allInOneBG.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\arrow_button_depressed.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\arrow_button_hover.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\breadcrumbSep.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\calendar.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\catalyst.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\clearValues.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\clear_x.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\closePanel.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\delete.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\drill_cursor.cur" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\export.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\filledCircle.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\first.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\grouptree_toggle.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\hollowCircle.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\last.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\leftTriangle.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\line.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\logo.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\magnify.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\min.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\next.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\open_parameter_arrow.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\panelHeaderBG.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\panelNavigatorItemHL.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\panelNavigatorItemSelectedBG.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\panel_toggle.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\param_datafetching.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\param_dirty.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\param_info.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\param_run.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\param_warning.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\plus.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\prev.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\print.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\refresh.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\rightTriangle.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\search.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\separator.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\StackedTab.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\style.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\toolbar_background.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\toolbar_buttongroup_background.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\toolbar_buttongroup_left.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\toolbar_buttongroup_right.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\toolbar_button_depressed.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\toolbar_button_hover.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\toolbar_menuarrow_depressed.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\toolbar_menuarrow_hover.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\toolbar_pagenav_buttons.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\toolbar_separator_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\undo.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\up.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\images\WarningPopupTriangle.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\initDhtmlLib.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\IOAdapters.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\LeftPanel.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\OptionalParameterUI.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\OptionalParameterValueRow.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\PanelHeader.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\PanelNavigator.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\PanelNavigatorItem.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\Parameter.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ParameterController.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ParameterDialog.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ParameterInfoRow.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ParameterPanel.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ParameterPanelToolbar.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ParameterUI.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ParameterValueRow.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\PromptPage.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\RangeField.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ReportAlbum.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ReportPage.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ReportView.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\Separator.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\SharedWidgetHolder.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\SignalDisposer.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\StackedPanel.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\StackedTab.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\StateManager.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\Statusbar.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_cs.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_da.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_de.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_en.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_es.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_fi.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_fr.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_hu.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_it.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_ja.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_ko.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_nb.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_nl.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_pl.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_pt.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_ru.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_sk.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_sv.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_th.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_tr.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_zh_CN.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\strings_zh_TW.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\TextCombo.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\TextField.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\Toolbar.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ToolPanel.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\Viewer.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ViewerFlexParameterAdapter.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\ViewerListener.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\crviewer\WarningPopup.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\bolist.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\calendar.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\dialog.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\dom.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\empty.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\borders.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\help.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\loading.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\lov.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\min.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\plus.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\print.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\print_fe.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\prompt.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\resizepattern.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\bolist.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\button.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\buttonIcons.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\critical_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\dialogelements.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\dialogframe.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\dialogframeleftright.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\dialogframetopbottom.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\dialogtitle.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\down.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\iconsep.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\information_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\left.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\menus.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\node.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\progress.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\resize.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\right.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\scroll_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\sep.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\sep_solid.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\style.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\style.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\style_fe.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\tabs.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\up.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\wait01.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\wait02.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_coloredline\warning_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\bolist.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\button.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\buttonIcons.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\critical_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\dialogelements.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\dialogframe.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\dialogframeleftright.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\dialogframetopbottom.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\dialogtitle.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\down.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\iconsep.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\information_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\left.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\menus.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\node.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\progress.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\resize.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\right.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\scroll_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\sep.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\sep_solid.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\style.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\style.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\style_fe.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\tabs.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\up.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\wait01.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\wait02.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_corporate\warning_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\bolist.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\button.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\buttonIcons.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\critical_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\dialogelements.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\dialogframe.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\dialogframeleftright.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\dialogframetopbottom.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\dialogtitle.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\down.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\iconsep.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\information_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\left.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\menus.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\node.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\progress.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\resize.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\right.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\scroll_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\sep.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\sep_solid.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\style.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\style.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\style_fe.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\tabs.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\up.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\wait01.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\wait02.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_default\warning_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\background_field.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\background_menusel.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\bolist.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\button.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\buttonIcons.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\critical_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\critical_icon.png" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\dialogelements.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\dialogframe.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\dialogframeleftright.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\dialogframetopbottom.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\dialogtitle.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\down.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\hgrab.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\horiz_tabs.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\iconsep.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\information_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\left.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\menuitem_check.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\menus.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\node.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\panemenu.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\panetitle.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\progress.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\resize.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\right.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\scroll_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\sep.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\sep_solid.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\style.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\style.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\style_fe.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\tabs.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\toolbar_elements.png" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\up.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\vgrab.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\wait01.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\wait02.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\skin_standard\warning_icon.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\swap.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\transp.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\images\tree.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\cs\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\da\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\de\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\en\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\es\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\fi\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\fr\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\hu\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\it\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\ja\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\ko\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\nb\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\nl\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\pl\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\pt\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\ru\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\sk\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\sv\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\th\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\tr\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\zh_CN\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\language\zh_TW\labels.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\lov.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\menu.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\palette.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\prompttree.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\psheet.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\andorwidget.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\basicDialog.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\blockWhileWait.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\bolist.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\borderswidget.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\buttons.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\calendar.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\checktree.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\default.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\dim.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\dim_close.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\dim_o.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\dim_open.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\empty.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\eventsDialog.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\fieldswidget.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\format.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\framezone.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\grabber.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\iconlistpopupwidget.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\iconscrollmenuwidget.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\imgtabs.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\inconwidget.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\infowidget.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\lov.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\measure.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\measure_o.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\menu.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\navigation.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\palettes.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\pane.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\parent_dialog.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\progressBar.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\prompttree.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\qualif.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\scrolltabs.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\simplelist.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\skinIntl.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\tabs.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\textcombowidget.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\tooltipwidget.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\treeicons.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\treeview.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\unv_close.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\unv_o.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\unv_open.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\samples\waitDialog.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\treeview.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\validator\default.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\validator\validator_res.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dhtmllib\waitdialog.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\dt_param.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\external\date.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\FlexParameterBridge.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\KeyDownEvent.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\log4javascript\log4javascript.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\log4javascript\log4javascript_stub.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\log4javascript\log4javascript_stub_uncompressed.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\log4javascript\log4javascript_uncompressed.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\log4javascript\main.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\3rdParty.txt" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\Async.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\Base.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\Color.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\Controls.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\DateTime.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\DOM.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\DragAndDrop.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\Format.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\Iter.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\License.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\Logging.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\LoggingPane.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\MochiKit.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\MockDOM.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\New.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\Signal.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\Sortable.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\Style.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\Test.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\Visual.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\MochiKit\__package__.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\previewerror.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\prompts.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\prompts_param.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\js\swfobject\swfobject.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\parameterUIController-compressed.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\preview.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\processindicator.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\promptengine-compressed.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\css\promptengine2.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\css\promptengine_default.css" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\html\calendar.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\html\calendarbottom.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\html\calendartop.html" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\addallfield.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\addallfield_over.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\addfield.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\addfield_over.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\back.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\background_field.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\back_over.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\button.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\button_left_normal.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\button_middle_normal.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\button_right_normal.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\calendar.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\cfilter.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\cfilter_over.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\dialogelements.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\dialogtitle.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\error.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\errormsg.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\filter.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\filter_over.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\forward.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\forward_over.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\info.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\infomsg.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\minus.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\next.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\next_over.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\plus.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\prev.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\prev_over.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\resize.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\transp.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\warning.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\images\warningmsg.gif" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\initDhtmlLib.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_calendar.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_calendar2.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_prompts.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_prompts2.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_cs.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_da.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_de.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_en.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_es.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_fi.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_fr.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_hu.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_it.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_ja.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_ko.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_nb.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_nl.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_pl.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_pt.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_ru.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_sk.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_sv.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_th.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_tr.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_zh_CN.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\prompting\js\promptengine_strings_zh_TW.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\urlreporting\activexviewer.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\urlreporting\appletviewer.js" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\DatosValorizacion\Excel.xsl" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\DatosValorizacion\rptDatosValorizacion.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\DMTU\Excel.xsl" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\DMTU\rptDMTU.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\EjecucionOTCuadrilla\rptEjecucionOTCuadrilla.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\EjecucionOTFecha\Excel.xsl" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\EjecucionOTFecha\rptEjecucionOTFecha.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\MontoPorEstado\MontosPorEstado.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\ObservacionOT\Excel.xsl" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\ObservacionOT\ObservacionEstadisticaOT.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\ObservacionOT\ObservacionesOT.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\OTValorizacion\OTValorizacion.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\PermisoMunicipal\PermisosMunicipales.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\ProgramacionOT\ProgramacionCuadrilla.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\Puntaje\Puntaje.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\Puntaje\RprVisorPuntajeDiario.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\Purga\Excel.xsl" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\Purga\rptPurga.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\RadioVSProduccion\Excel.xsl" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\RadioVSProduccion\rptRadioVsProduccion.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\Stock\rptStock.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\TrabajoComplementario\ProgramacionTC.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\VBOrdenes\rptReporteVBOrdenes.aspx" />
+    <Content Include="Sistema\Modulos\ProduccionServicios\Reportes\VisorReporte.aspx" />
+    <Content Include="Sistema\WestMenu.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Sistema\mantener_sesion.ashx" />
+    <None Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\crviewer.dep" />
+    <None Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\crsmarttag.jsp" />
+    <None Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\preview.jsp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCode\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppCode\ControlHelper.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\CambioPassword.aspx.cs">
+      <DependentUpon>CambioPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\CambioPassword.aspx.designer.cs">
+      <DependentUpon>CambioPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\DashBoard.aspx.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\DashBoard.aspx.designer.cs">
+      <DependentUpon>DashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\HelpWindow.ascx.cs">
+      <DependentUpon>HelpWindow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\HelpWindow.ascx.designer.cs">
+      <DependentUpon>HelpWindow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\mantener_sesion.ashx.cs">
+      <DependentUpon>mantener_sesion.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Maestras\Actividad\Actividad.aspx.cs">
+      <DependentUpon>Actividad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Maestras\Actividad\Actividad.aspx.designer.cs">
+      <DependentUpon>Actividad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Maestras\Actividad\SubActividad.aspx.cs">
+      <DependentUpon>SubActividad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Maestras\Actividad\SubActividad.aspx.designer.cs">
+      <DependentUpon>SubActividad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Maestras\EstadoOT\EstadoOT.aspx.cs">
+      <DependentUpon>EstadoOT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Maestras\EstadoOT\EstadoOT.aspx.designer.cs">
+      <DependentUpon>EstadoOT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Maestras\TrabajoComplementario\TrabajoComplementario.aspx.cs">
+      <DependentUpon>TrabajoComplementario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Maestras\TrabajoComplementario\TrabajoComplementario.aspx.designer.cs">
+      <DependentUpon>TrabajoComplementario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Maestras\Zona\Zona.aspx.cs">
+      <DependentUpon>Zona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Maestras\Zona\Zona.aspx.designer.cs">
+      <DependentUpon>Zona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ArchivosImpresionMasiva\ArchivoParaImpresionMasiva.aspx.cs">
+      <DependentUpon>ArchivoParaImpresionMasiva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ArchivosImpresionMasiva\ArchivoParaImpresionMasiva.aspx.designer.cs">
+      <DependentUpon>ArchivoParaImpresionMasiva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\AuxiliarCatalogo\AuxiliarCatalogo.aspx.cs">
+      <DependentUpon>AuxiliarCatalogo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\AuxiliarCatalogo\AuxiliarCatalogo.aspx.designer.cs">
+      <DependentUpon>AuxiliarCatalogo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\CambioEstadoValorizacion\CambioEstadoMasivo.aspx.cs">
+      <DependentUpon>CambioEstadoMasivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\CambioEstadoValorizacion\CambioEstadoMasivo.aspx.designer.cs">
+      <DependentUpon>CambioEstadoMasivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\CargaConsumo\CargaConsumo.aspx.cs">
+      <DependentUpon>CargaConsumo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\CargaConsumo\CargaConsumo.aspx.designer.cs">
+      <DependentUpon>CargaConsumo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\Carga\CambioMasivoEstado.aspx.cs">
+      <DependentUpon>CambioMasivoEstado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\Carga\CambioMasivoEstado.aspx.designer.cs">
+      <DependentUpon>CambioMasivoEstado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\Carga\CargaSGIO.aspx.cs">
+      <DependentUpon>CargaSGIO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\Carga\CargaSGIO.aspx.designer.cs">
+      <DependentUpon>CargaSGIO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ConsultaAlmacenProduccion\ConsultaAlmacenProduccion.aspx.cs">
+      <DependentUpon>ConsultaAlmacenProduccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ConsultaAlmacenProduccion\ConsultaAlmacenProduccion.aspx.designer.cs">
+      <DependentUpon>ConsultaAlmacenProduccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ConsultaCatalogoAuxiliar\ConsultaCatalogoAuxiliar.aspx.cs">
+      <DependentUpon>ConsultaCatalogoAuxiliar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ConsultaCatalogoAuxiliar\ConsultaCatalogoAuxiliar.aspx.designer.cs">
+      <DependentUpon>ConsultaCatalogoAuxiliar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ConsultaTeorico\ConsultaTeorico.aspx.cs">
+      <DependentUpon>ConsultaTeorico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ConsultaTeorico\ConsultaTeorico.aspx.designer.cs">
+      <DependentUpon>ConsultaTeorico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ConsumoMateriales\ConsumoMaterial.aspx.cs">
+      <DependentUpon>ConsumoMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ConsumoMateriales\ConsumoMaterial.aspx.designer.cs">
+      <DependentUpon>ConsumoMaterial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\CruceMaterial\CruceMateriales.aspx.cs">
+      <DependentUpon>CruceMateriales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\CruceMaterial\CruceMateriales.aspx.designer.cs">
+      <DependentUpon>CruceMateriales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\CruceMaterial\RegistroCruceMaterial.aspx.cs">
+      <DependentUpon>RegistroCruceMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\CruceMaterial\RegistroCruceMaterial.aspx.designer.cs">
+      <DependentUpon>RegistroCruceMaterial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\CuadrillaZona\CuadrillaZona.aspx.cs">
+      <DependentUpon>CuadrillaZona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\CuadrillaZona\CuadrillaZona.aspx.designer.cs">
+      <DependentUpon>CuadrillaZona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\EjecucionOT\MantEjecucionOT.aspx.cs">
+      <DependentUpon>MantEjecucionOT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\EjecucionOT\MantEjecucionOT.aspx.designer.cs">
+      <DependentUpon>MantEjecucionOT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\EjecucionOT\MantMasivoEjecucionOT.aspx.cs">
+      <DependentUpon>MantMasivoEjecucionOT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\EjecucionOT\MantMasivoEjecucionOT.aspx.designer.cs">
+      <DependentUpon>MantMasivoEjecucionOT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\EjecucionOT\RegEjecucionOT.aspx.cs">
+      <DependentUpon>RegEjecucionOT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\EjecucionOT\RegEjecucionOT.aspx.designer.cs">
+      <DependentUpon>RegEjecucionOT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\Inconsistencias\InconsistenciaDatos.aspx.cs">
+      <DependentUpon>InconsistenciaDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\Inconsistencias\InconsistenciaDatos.aspx.designer.cs">
+      <DependentUpon>InconsistenciaDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\Monitoreo\MonitoreoOT.aspx.cs">
+      <DependentUpon>MonitoreoOT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\Monitoreo\MonitoreoOT.aspx.designer.cs">
+      <DependentUpon>MonitoreoOT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ObraDistrito\ObraDistrito.aspx.cs">
+      <DependentUpon>ObraDistrito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ObraDistrito\ObraDistrito.aspx.designer.cs">
+      <DependentUpon>ObraDistrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ProductoAuxiliar\ProductoAuxiliar.aspx.cs">
+      <DependentUpon>ProductoAuxiliar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ProductoAuxiliar\ProductoAuxiliar.aspx.designer.cs">
+      <DependentUpon>ProductoAuxiliar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ResponsableActividad\ResponsableActividad.aspx.cs">
+      <DependentUpon>ResponsableActividad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Procesos\ResponsableActividad\ResponsableActividad.aspx.designer.cs">
+      <DependentUpon>ResponsableActividad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\rptBuzonesLimpiezaMaqBalde.aspx.cs">
+      <DependentUpon>rptBuzonesLimpiezaMaqBalde.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\rptBuzonesLimpiezaMaqBalde.aspx.designer.cs">
+      <DependentUpon>rptBuzonesLimpiezaMaqBalde.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\rptCargoOTChorrillos.aspx.cs">
+      <DependentUpon>rptCargoOTChorrillos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\rptCargoOTChorrillos.aspx.designer.cs">
+      <DependentUpon>rptCargoOTChorrillos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\rptLimpBuzonRetSolidos.aspx.cs">
+      <DependentUpon>rptLimpBuzonRetSolidos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\rptLimpBuzonRetSolidos.aspx.designer.cs">
+      <DependentUpon>rptLimpBuzonRetSolidos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\rptLimpiezaColectoresMaqBaldes.aspx.cs">
+      <DependentUpon>rptLimpiezaColectoresMaqBaldes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\rptLimpiezaColectoresMaqBaldes.aspx.designer.cs">
+      <DependentUpon>rptLimpiezaColectoresMaqBaldes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\rptOrdLimpColectCambioTapaBuz.aspx.cs">
+      <DependentUpon>rptOrdLimpColectCambioTapaBuz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\AlcantarilladoD\rptOrdLimpColectCambioTapaBuz.aspx.designer.cs">
+      <DependentUpon>rptOrdLimpColectCambioTapaBuz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CargoEntrega\CargoEntregaSGIDTO.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CargoEntrega\rptCargoEntregaCallao.cs">
+      <DependentUpon>rptCargoEntregaCallao.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CargoEntrega\rptCargoEntrega.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCargoEntrega.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CargoEntrega\VerCargoSGI.aspx.cs">
+      <DependentUpon>VerCargoSGI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CargoEntrega\VerCargoSGI.aspx.designer.cs">
+      <DependentUpon>VerCargoSGI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceMaterial\CruceMaterialDetallado2.cs">
+      <DependentUpon>CruceMaterialDetallado2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceMaterial\CruceMaterial.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CruceMaterial.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceMaterial\CruceMaterialDetallado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CruceMaterialDetallado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceMaterial\RptCruceMaterialDTO.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceMaterial\RptVisorCruceMaterial.aspx.cs">
+      <DependentUpon>RptVisorCruceMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceMaterial\RptVisorCruceMaterial.aspx.designer.cs">
+      <DependentUpon>RptVisorCruceMaterial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceMaterial\RptVisorCruceMaterialDetallado.aspx.cs">
+      <DependentUpon>RptVisorCruceMaterialDetallado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceMaterial\RptVisorCruceMaterialDetallado.aspx.designer.cs">
+      <DependentUpon>RptVisorCruceMaterialDetallado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceOTs\rptCruceOTVilla.cs">
+      <DependentUpon>rptCruceOTVilla.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceOTs\rptCruceOTChorrillos.cs">
+      <DependentUpon>rptCruceOTChorrillos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceOTs\rptCruceOTComas.cs">
+      <DependentUpon>rptCruceOTComas.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceOTs\CruceOTSP.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceOTs\rptCruceOTCallao.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCruceOTCallao.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\DatosValorizacion\rptDatosValorizacion.aspx.cs">
+      <DependentUpon>rptDatosValorizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\DatosValorizacion\rptDatosValorizacion.aspx.designer.cs">
+      <DependentUpon>rptDatosValorizacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\DMTU\ReporteDMTU.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\DMTU\rptDMTU.aspx.cs">
+      <DependentUpon>rptDMTU.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\DMTU\rptDMTU.aspx.designer.cs">
+      <DependentUpon>rptDMTU.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\DMTU\rptDMTUs.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDMTUs.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\EjecucionOTCuadrilla\ReporteEjecucionCuadrilla.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\EjecucionOTCuadrilla\rptEjecPorCuadrillaDet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEjecPorCuadrillaDet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\EjecucionOTCuadrilla\rptEjecucionOTCuadrilla.aspx.cs">
+      <DependentUpon>rptEjecucionOTCuadrilla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\EjecucionOTCuadrilla\rptEjecucionOTCuadrilla.aspx.designer.cs">
+      <DependentUpon>rptEjecucionOTCuadrilla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\EjecucionOTCuadrilla\rptEjecucionPorCuadrilla.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEjecucionPorCuadrilla.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\EjecucionOTFecha\ReporteEjecucionFecha.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\EjecucionOTFecha\rptEjecucionOTFecha.aspx.cs">
+      <DependentUpon>rptEjecucionOTFecha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\EjecucionOTFecha\rptEjecucionOTFecha.aspx.designer.cs">
+      <DependentUpon>rptEjecucionOTFecha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\EjecucionOTFecha\rptEjecucionOTsFechas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEjecucionOTsFechas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\MontoPorEstado\MontoEstadoRPT.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\MontoPorEstado\MontosPorEstado.aspx.cs">
+      <DependentUpon>MontosPorEstado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\MontoPorEstado\MontosPorEstado.aspx.designer.cs">
+      <DependentUpon>MontosPorEstado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\MontoPorEstado\rptMontoEstadoFinal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMontoEstadoFinal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\MontoPorEstado\rptMontosEstadoResumen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMontosEstadoResumen.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\MontoPorEstado\rptMostosEstado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMostosEstado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\ObservacionOT\ObservacionEstadisticaOT.aspx.cs">
+      <DependentUpon>ObservacionEstadisticaOT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\ObservacionOT\ObservacionEstadisticaOT.aspx.designer.cs">
+      <DependentUpon>ObservacionEstadisticaOT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\ObservacionOT\ObservacionesOT.aspx.cs">
+      <DependentUpon>ObservacionesOT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\ObservacionOT\ObservacionesOT.aspx.designer.cs">
+      <DependentUpon>ObservacionesOT.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\ObservacionOT\ObservacionEstadistica.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\ObservacionOT\rptIndicadorEstadisticoOT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptIndicadorEstadisticoOT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\ObservacionOT\rptObservacionOT.cs">
+      <DependentUpon>rptObservacionOT.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\OTValorizacion\OTValorizacion.aspx.cs">
+      <DependentUpon>OTValorizacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\OTValorizacion\OTValorizacion.aspx.designer.cs">
+      <DependentUpon>OTValorizacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\OTValorizacion\OTValorizacionReporte.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\OTValorizacion\rptOTxDistrito.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptOTxDistrito.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\OTValorizacion\rptOTxValorizacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptOTxValorizacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\PermisoMunicipal\PermisoMuniDTO.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\PermisoMunicipal\PermisosMunicipales.aspx.cs">
+      <DependentUpon>PermisosMunicipales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\PermisoMunicipal\PermisosMunicipales.aspx.designer.cs">
+      <DependentUpon>PermisosMunicipales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\PermisoMunicipal\rptPermisoMuni.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPermisoMuni.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\ProgramacionOT\rptEjecucionOTPuntaje.cs">
+      <DependentUpon>rptEjecucionOTPuntaje.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\ProgramacionOT\OTProgramacion.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\ProgramacionOT\ProgramacionCuadrilla.aspx.cs">
+      <DependentUpon>ProgramacionCuadrilla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\ProgramacionOT\ProgramacionCuadrilla.aspx.designer.cs">
+      <DependentUpon>ProgramacionCuadrilla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\ProgramacionOT\rptEjecucionOT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEjecucionOT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\Puntaje\PuntajeAcumFecha.cs">
+      <DependentUpon>PuntajeAcumFecha.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\Puntaje\PuntajeFecha.cs">
+      <DependentUpon>PuntajeFecha.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\Puntaje\Puntaje.aspx.cs">
+      <DependentUpon>Puntaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\Puntaje\Puntaje.aspx.designer.cs">
+      <DependentUpon>Puntaje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\Puntaje\PuntajeDTO.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\Puntaje\PuntajePorDia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PuntajePorDia.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\Puntaje\RprVisorPuntajeDiario.aspx.cs">
+      <DependentUpon>RprVisorPuntajeDiario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\Puntaje\RprVisorPuntajeDiario.aspx.designer.cs">
+      <DependentUpon>RprVisorPuntajeDiario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\Purga\rptPurga.aspx.cs">
+      <DependentUpon>rptPurga.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\Purga\rptPurga.aspx.designer.cs">
+      <DependentUpon>rptPurga.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\RadioVSProduccion\CruceRadioProduccions.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CruceRadioProduccions.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\RadioVSProduccion\ReporteRadioProduccion.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\RadioVSProduccion\rptRadioVsProduccion.aspx.cs">
+      <DependentUpon>rptRadioVsProduccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\RadioVSProduccion\rptRadioVsProduccion.aspx.designer.cs">
+      <DependentUpon>rptRadioVsProduccion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\Stock\rptStock.aspx.cs">
+      <DependentUpon>rptStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\Stock\rptStock.aspx.designer.cs">
+      <DependentUpon>rptStock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\Stock\rptStockCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptStockCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\Stock\rptStockDTO.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\TrabajoComplementario\rptProgramacionCorte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProgramacionCorte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\TrabajoComplementario\rptProgramacionDesmonte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProgramacionDesmonte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\TrabajoComplementario\ProgramacionDTO.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\TrabajoComplementario\ProgramacionTC.aspx.cs">
+      <DependentUpon>ProgramacionTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\TrabajoComplementario\ProgramacionTC.aspx.designer.cs">
+      <DependentUpon>ProgramacionTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\TrabajoComplementario\rptProgramacionResane.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProgramacionResane.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\TrabajoComplementario\rptProgramacionRotura.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProgramacionRotura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\TrabajoComplementario\rptProgramacionSenalizacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProgramacionSenalizacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\VBOrdenes\ReporteVBIngenieros.cs" />
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\VBOrdenes\rptReporteVBOrdenes.aspx.cs">
+      <DependentUpon>rptReporteVBOrdenes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\VBOrdenes\rptReporteVBOrdenes.aspx.designer.cs">
+      <DependentUpon>rptReporteVBOrdenes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\VBOrdenes\rptVBIngenierosOT.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptVBIngenierosOT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\VisorReporte.aspx.cs">
+      <DependentUpon>VisorReporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Modulos\ProduccionServicios\Reportes\VisorReporte.aspx.designer.cs">
+      <DependentUpon>VisorReporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\WestMenu.ascx.cs">
+      <DependentUpon>WestMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\WestMenu.ascx.designer.cs">
+      <DependentUpon>WestMenu.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Intranet.DTO\Intranet.DTO.csproj">
+      <Project>{80500EAA-2233-4B0C-A1D7-4398E11B119F}</Project>
+      <Name>Intranet.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intranet.BL\Intranet.BL.csproj">
+      <Project>{CE91E462-28F1-4345-97C6-D5DE36D45C41}</Project>
+      <Name>Intranet.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Intranet.Utilities\Intranet.Utilities.csproj">
+      <Project>{11EB770B-27B1-4A2B-901C-AE65C327C53F}</Project>
+      <Name>Intranet.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Libreria\Plantillas\" />
+    <Folder Include="Sistema\Modulos\SGE\Maestras\" />
+    <Folder Include="Sistema\Modulos\SGE\Procesos\" />
+    <Folder Include="Sistema\Modulos\SGE\Reportes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sistema\Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\CargoEntrega\rptCargoEntregaCallao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCargoEntregaCallao.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\CargoEntrega\rptCargoEntrega.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCargoEntrega.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceMaterial\CruceMaterialDetallado2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CruceMaterialDetallado2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceMaterial\CruceMaterial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CruceMaterial.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceMaterial\CruceMaterialDetallado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CruceMaterialDetallado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceOTs\rptCruceOTVilla.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCruceOTVilla.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceOTs\rptCruceOTChorrillos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCruceOTChorrillos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceOTs\rptCruceOTComas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCruceOTComas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\CruceOTs\rptCruceOTCallao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCruceOTCallao.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\DMTU\rptDMTUs.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDMTUs.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\EjecucionOTCuadrilla\rptEjecPorCuadrillaDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEjecPorCuadrillaDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\EjecucionOTCuadrilla\rptEjecucionPorCuadrilla.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEjecucionPorCuadrilla.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\EjecucionOTFecha\rptEjecucionOTsFechas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEjecucionOTsFechas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\MontoPorEstado\rptMontoEstadoFinal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMontoEstadoFinal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\MontoPorEstado\rptMontosEstadoResumen.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMontosEstadoResumen.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\MontoPorEstado\rptMostosEstado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMostosEstado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\ObservacionOT\rptIndicadorEstadisticoOT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptIndicadorEstadisticoOT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\ObservacionOT\rptObservacionOT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptObservacionOT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\OTValorizacion\rptOTxDistrito.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptOTxDistrito.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\OTValorizacion\rptOTxValorizacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptOTxValorizacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\PermisoMunicipal\rptPermisoMuni.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPermisoMuni.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\ProgramacionOT\rptEjecucionOTPuntaje.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEjecucionOTPuntaje.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\ProgramacionOT\rptEjecucionOT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEjecucionOT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\Puntaje\PuntajeAcumFecha.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PuntajeAcumFecha.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\Puntaje\PuntajeFecha.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PuntajeFecha.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\Puntaje\PuntajePorDia.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PuntajePorDia.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\RadioVSProduccion\CruceRadioProduccions.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CruceRadioProduccions.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\Stock\rptStockCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptStockCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\TrabajoComplementario\rptProgramacionCorte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProgramacionCorte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\TrabajoComplementario\rptProgramacionDesmonte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProgramacionDesmonte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\TrabajoComplementario\rptProgramacionResane.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProgramacionResane.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\TrabajoComplementario\rptProgramacionRotura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProgramacionRotura.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\TrabajoComplementario\rptProgramacionSenalizacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProgramacionSenalizacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Modulos\ProduccionServicios\Reportes\VBOrdenes\rptVBIngenierosOT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVBIngenierosOT.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>28231</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

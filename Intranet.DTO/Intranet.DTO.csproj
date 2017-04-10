@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{80500EAA-2233-4B0C-A1D7-4398E11B119F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Intranet.DTO</RootNamespace>
+    <AssemblyName>Intranet.DTO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CFG\CFG_Acceso.cs" />
+    <Compile Include="CFG\Global.cs" />
+    <Compile Include="ProduccionServicios\Maestras\ActividadDTO.cs" />
+    <Compile Include="ProduccionServicios\Maestras\DistritoDTO.cs" />
+    <Compile Include="ProduccionServicios\Maestras\ProductoDTO.cs" />
+    <Compile Include="ProduccionServicios\Maestras\SubActividadDTO.cs" />
+    <Compile Include="ProduccionServicios\Maestras\ZonaDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\AuxiliarCatalogo\AuxiliarCatalogoDTO.cs" />
+    <Compile Include="ProduccionServicios\Maestras\AuxiliarDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\AuxiliarProducto\AuxiliarProductoDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\CabeceraCruceMaterial\CabeceraCruceMaterialDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\CambioMasivoEstado\DatosSGIEstadoDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\CargaConsumo\CabeceraConsumoDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\CargaConsumo\DetalleConsumoDTO.cs" />
+    <Compile Include="ProduccionServicios\Maestras\CatalogoDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ConsultaCatalogoAuxiliar\ConsultaCatalogoAuxiliarDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ConsumoMaterial\CabeceraDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ConsumoMaterial\CargoEntregaDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ConsumoMaterial\ConsumoMaterialDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ConsumoMaterial\DetalleBuzonDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ConsumoMaterial\DetalleCaracteristicasDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ConsumoMaterial\DetalleConexionesDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ConsumoMaterial\DetalleDeficienciasDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ConsumoMaterial\DetalleDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ConsumoMaterial\DetalleInspeccionDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ConsumoMaterial\DetalleLimpiezaDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ConsumoMaterial\DetalleOtrosDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ConsumoMaterial\DetallePurgaDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ConsumoMaterial\DetalleSubActividadDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\CruceMaterial\CruceMaterialDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\CuadrillaDistrito\CuadrillaDistritoDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\DetalleCruceMaterial\DetalleCruceMaterialDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\EjecucionOT\AdminTrabajoComplementarioDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\Carga\ArchivoCargaOTDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\EjecucionOT\EjecucionOTMasivaGridDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\EjecucionOT\EjecucionOTDTO.cs" />
+    <Compile Include="ProduccionServicios\Maestras\EstadoOTDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\EjecucionOT\EjecucionOTGridDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\MovimientoAlmacen\CabeceraMovimientoDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\MovimientoAlmacen\DetalleMovimientoDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ObservacionCruceMaterial\ObservacionCrucematerialDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\Puntaje\PuntajesDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\Valorizacion\ValorizacionDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\BuzonesLimpMaqBaldeDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\CargoEntregaDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\CargoOTChorrillosDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\CruceOTsDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\DatosValorizacionDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\DMTUDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\EjecucionOTCuadrillaDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\EjecucionOTFechaDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\LimpBuzonRetSolidosDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\LimpiezaColectoresMaqBaldesDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\MontoEstadoDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\ObservacionEstadisticaDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\OTValorizacionDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\PermisoMunicipal.cs" />
+    <Compile Include="ProduccionServicios\Reportes\ProgramacionCuadrillaDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\ObraDistrito\ObraDistritoDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\OrdenTrabajo\OrdenTrabajoDTO.cs" />
+    <Compile Include="ProduccionServicios\Procesos\EjecucionOT\ResponsableActividadDTO.cs" />
+    <Compile Include="ProduccionServicios\Maestras\TrabajoComplementarioDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\PurgaDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\RadioProduccionDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\StockDTO.cs" />
+    <Compile Include="ProduccionServicios\Reportes\VBIngenieroDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SGE\Cuadrilla\CuadrillaDTO.cs" />
+    <Compile Include="SGE\Empleado\EmpleadoDTO.cs" />
+    <Compile Include="SGE\Generica\GenericaDTO.cs" />
+    <Compile Include="SGE\Obra\ObraDTO.cs" />
+    <Compile Include="SGE\Proveedor\ProveedorDTO.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
