@@ -28,6 +28,11 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -137,7 +142,9 @@
     <Content Include="Libreria\Dlls\Ext.Net.Utilities.dll" />
     <Content Include="Libreria\Dlls\Newtonsoft.Json.dll" />
     <Content Include="Libreria\Imagenes\logoIntranet.png" />
+    <Content Include="Sistema\Demos.sln" />
     <Content Include="Sistema\HelpWindow.ascx" />
+    <Content Include="Sistema\lectorqr.aspx" />
     <Content Include="Sistema\Login.aspx" />
     <Content Include="Sistema\Modulos\ProduccionServicios\Maestras\Actividad\Actividad.aspx" />
     <Content Include="Sistema\Modulos\ProduccionServicios\Maestras\Actividad\SubActividad.aspx" />
@@ -882,6 +889,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Sistema\mantener_sesion.ashx" />
+    <Content Include="Sistema\Demos.v11.suo" />
     <None Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\ActiveXControls\crviewer.dep" />
     <None Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\crsmarttag.jsp" />
     <None Include="Sistema\Modulos\ProduccionServicios\Reportes\crystalreportviewers\preview.jsp" />
@@ -926,6 +934,13 @@
     </Compile>
     <Compile Include="Sistema\HelpWindow.ascx.designer.cs">
       <DependentUpon>HelpWindow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\lectorqr.aspx.cs">
+      <DependentUpon>lectorqr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sistema\lectorqr.aspx.designer.cs">
+      <DependentUpon>lectorqr.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sistema\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
