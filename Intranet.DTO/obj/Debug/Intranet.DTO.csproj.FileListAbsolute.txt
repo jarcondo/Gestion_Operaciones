@@ -29,3 +29,8 @@ E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DTO\bin\Debug\Intranet.DTO.d
 E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DTO\bin\Debug\Intranet.DTO.pdb
 E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DTO\obj\Debug\Intranet.DTO.dll
 E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DTO\obj\Debug\Intranet.DTO.pdb
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DTO\bin\Debug\Intranet.DTO.dll
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DTO\bin\Debug\Intranet.DTO.pdb
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DTO\obj\Debug\Intranet.DTO.csprojResolveAssemblyReference.cache
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DTO\obj\Debug\Intranet.DTO.dll
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DTO\obj\Debug\Intranet.DTO.pdb

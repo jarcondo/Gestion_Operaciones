@@ -100,3 +100,15 @@ E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DAO\bin\Debug\Microsoft.Prac
 E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DAO\obj\Debug\Intranet.DAO.csprojResolveAssemblyReference.cache
 E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DAO\obj\Debug\Intranet.DAO.dll
 E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.DAO\obj\Debug\Intranet.DAO.pdb
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DAO\bin\Debug\Intranet.DAO.dll
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DAO\bin\Debug\Intranet.DAO.pdb
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DAO\bin\Debug\Ext.Net.dll
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DAO\bin\Debug\Intranet.DTO.dll
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DAO\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DAO\bin\Debug\Ext.Net.Utilities.dll
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DAO\bin\Debug\Intranet.DTO.pdb
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DAO\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DAO\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DAO\obj\Debug\Intranet.DAO.csprojResolveAssemblyReference.cache
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DAO\obj\Debug\Intranet.DAO.dll
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.DAO\obj\Debug\Intranet.DAO.pdb

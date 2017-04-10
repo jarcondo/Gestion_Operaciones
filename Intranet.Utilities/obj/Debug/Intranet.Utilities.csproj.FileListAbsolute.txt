@@ -29,3 +29,8 @@ E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.Utilities\bin\Debug\Intranet
 E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.Utilities\bin\Debug\Intranet.Utilities.pdb
 E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.Utilities\obj\Debug\Intranet.Utilities.dll
 E:\Dropbox\ProyectosSMC\GestionOperaciones\Intranet.Utilities\obj\Debug\Intranet.Utilities.pdb
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.Utilities\bin\Debug\Intranet.Utilities.dll
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.Utilities\bin\Debug\Intranet.Utilities.pdb
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.Utilities\obj\Debug\Intranet.Utilities.csprojResolveAssemblyReference.cache
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.Utilities\obj\Debug\Intranet.Utilities.dll
+C:\Users\PC-SMART\Documents\GitHub\Gestion_Operaciones\Intranet.Utilities\obj\Debug\Intranet.Utilities.pdb

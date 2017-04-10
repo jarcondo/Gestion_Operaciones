@@ -136,6 +136,7 @@
     <Content Include="Libreria\Imagenes\xformtext.gif" />
     <Content Include="Libreria\Scripts\global.js" />
     <Content Include="Sistema\CambioPassword.aspx" />
+    <Content Include="Sistema\ClassLibrary1.sln" />
     <Content Include="Sistema\DashBoard.aspx" />
     <Content Include="Sistema\Default.aspx" />
     <Content Include="Libreria\Dlls\Ext.Net.dll" />
@@ -914,6 +915,7 @@
     <Compile Include="Sistema\CambioPassword.aspx.designer.cs">
       <DependentUpon>CambioPassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Sistema\Class1.cs" />
     <Compile Include="Sistema\DashBoard.aspx.cs">
       <DependentUpon>DashBoard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
